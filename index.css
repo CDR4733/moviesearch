@@ -42,9 +42,16 @@ input::placeholder {
 
 .rsearchcls {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding-top: 0px;
 }
+
+.ccmoviecls {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding-top: 0px;
+}
+
 
 /* 영화카드 섹션 */
 .tempcls {

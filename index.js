@@ -6,30 +6,47 @@ const options = {
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNjMyMGNmY2Y2ZDdhYTc3ZTQxNTg0YzAxMTI5MWRlOSIsInN1YiI6IjY2MjhiOGYwYWY5NTkwMDE2NDZhMTQxOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lEQ6J5sg5aCUZhM6bXnDEXr4p4bqytNSjtucNb_sH3Y'
     }
 };
-let url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+let url1 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+let url2 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=2';
+let url3 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=3';
+let url4 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=4';
+let url5 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=5';
+let urltop100 = [url1, url2, url3, url4, url5];
 let r; // fetch 받을 변수
 let scdarr = [];
 
 // 영화카드섹션에 만들어진 영화카드를 출력하는 함수
 let getCard = function () {
     // TMDB API 가져오기(fetch)
-    fetch(url, options)
+    fetch(url1, options)
         .then(response => response.json())
         .then(response => {
             scdarr = [];
             arrcount = 0;
             let r = response['results'];
-
-            // 검색된 영화 수 카운트
             makeCard(r);
+
+            // 검색된 영화 수 카운트 // forEach 사용 *****            
             scdarr.forEach(a => {
                 arrcount = arrcount + 1;
             });
+
+            // 영화 수 카운트 출력 // DOM 제어 사용 *****
             let scdcount = document.getElementById('rsearchid');
             scdcount.innerText = '검색된 영화 수 : ' + arrcount + '건';
 
+            // 출력된 영화 카드 중 가장 평점이 높은 영화(배열에서 0번째 영화)
+            // 가 추천영화로 뜨고 있는지 확인하는 console.log삽입 = 확인용 // find 사용 *****
+            scdarr.find(function(el, index) {
+                console.log(index, el);
+            });
+
+            // 추천 영화로 가장 평점이 높은 영화 출력 // DOM 제어 사용 *****
+            let ccmv = document.getElementById('ccmovieid');
+            ccmv.innerText = "추천 영화는 '" + scdarr[0] + "' 입니다."; // arrcount를 제일 첫 영화 제목으로 교체
         })
         .catch(err => console.error(err));
+
 };
 getCard(); // 페이지를 시작하면 일단 영화카드 전부 다 띄움
 
