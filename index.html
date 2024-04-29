@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2주차 개인프로젝트</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javaScript" src="index.js"></script>
+
+</head>
+
+<body>
+    <!-- 헤더 섹션 -->
+    <header>
+        <h1>최고 평점 영화 소개</h1>
+    </header>
+
+    <!-- 검색 섹션 -->
+    <section id="searchsectionid" class="searchsectioncls">
+        <div>
+            <label style="font-size: 20px;">🔍</label>
+            <input type="text" id="searchmvid" class="searchmvcls" placeholder="영화 제목을 검색해주세요!">
+            <button id="searchbtnid" class="searchbtncls" onclick="searchClick()">Search</button>
+        </div>
+        <div>
+            <p id="rsearchid" class="rsearchcls"> </p>
+        </div>
+    </section>
+
+    <!-- 영화카드 섹션 -->
+    <section id="cardsectionid" class="cardsectioncls">
+
+        <!-- 영화카드 -->
+        <div id="cardtempid" class="cardtempcls">
+                <!-- 여기에 temp_html -->
+        </div>
+    </section>
+</body>
+
+</html>

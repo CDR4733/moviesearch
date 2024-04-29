@@ -1,0 +1,71 @@
+body {
+    /* 페이지 전체에 공통 적용 */
+    background-color: black;
+    color: beige;
+}
+
+/* 헤더 섹션 */
+header {
+    /* 최고 평점 영화 소개 */
+    text-align: center;
+}
+
+/* 검색 섹션 */
+.searchsectioncls {
+    /* 검색 섹션 전체에 공통 적용 */
+    text-align: center;
+}
+
+.searchmvcls {
+    /* 검색 인풋 */
+    width: 250px;
+    height: 32px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    /* 검색 인풋 플레이스홀더 */
+    text-align: center;
+}
+
+.searchbtncls {
+    /* 검색 버튼 */
+    border-radius: 15px;
+    width: 150px;
+    height: 38px;
+    background-color: red;
+    color: beige;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.rsearchcls {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+}
+
+/* 영화카드 섹션 */
+.tempcls {
+    /* 카드 1장 기준*/
+    height: 337px;
+    width: 700px;
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 15px auto 15px auto;
+    padding: 15px auto 15px auto;
+}
+
+.postercls {
+    /* 포스터 사진 */
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.trocls {
+    /* 제목 + 평점 + 오버뷰 */
+    margin-top: 10%;
+    margin-right: 15px;
+}
