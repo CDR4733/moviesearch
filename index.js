@@ -6,19 +6,15 @@ const options = {
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNjMyMGNmY2Y2ZDdhYTc3ZTQxNTg0YzAxMTI5MWRlOSIsInN1YiI6IjY2MjhiOGYwYWY5NTkwMDE2NDZhMTQxOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lEQ6J5sg5aCUZhM6bXnDEXr4p4bqytNSjtucNb_sH3Y'
     }
 };
-let url1 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
-let url2 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=2';
-let url3 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=3';
-let url4 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=4';
-let url5 = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=5';
-let urltop100 = [url1, url2, url3, url4, url5];
+let url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+
 let r; // fetch 받을 변수
 let scdarr = [];
 
 // 영화카드섹션에 만들어진 영화카드를 출력하는 함수
 let getCard = function () {
     // TMDB API 가져오기(fetch)
-    fetch(url1, options)
+    fetch(url, options)
         .then(response => response.json())
         .then(response => {
             scdarr = [];
