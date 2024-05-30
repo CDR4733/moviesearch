@@ -3,7 +3,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNjMyMGNmY2Y2ZDdhYTc3ZTQxNTg0YzAxMTI5MWRlOSIsInN1YiI6IjY2MjhiOGYwYWY5NTkwMDE2NDZhMTQxOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lEQ6J5sg5aCUZhM6bXnDEXr4p4bqytNSjtucNb_sH3Y'
+        Authorization: 'Bearer e'
     }
 };
 let url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
